@@ -11,9 +11,10 @@
 
   --clr-white: 0 0 100;
 
-  --fs-300: 1.4rem;
-  --fs-400: 1.6rem;
-  --fs-500: 2.4rem;
+  /* this is a good tool for handling these: https://modern-fluid-typography.vercel.app/ */
+  --fs-300: clamp(1.2rem, 0.5vw + 1rem, 1.4rem);
+  --fs-400: clamp(1.4rem, 0.8vw + 1rem, 1.6rem);
+  --fs-500: clamp(2rem, 2vw + 1rem, 2.4rem);
 
   --ff-sans: "Figtree", sans-serif;
 
@@ -47,6 +48,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  padding-inline: var(--spacing-400);
 
   color: hsl(var(--clr-gray-100));
   font-size: var(--fs-400);
@@ -92,7 +94,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-400);
-  width: 38.4rem;
+  max-width: 38.4rem;
   padding: var(--spacing-400);
 
   border-radius: var(--outer-border-radius);
@@ -108,7 +110,9 @@ img {
   }
 
   & .blog-preview__thumbnail {
-    min-height: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
     border-radius: var(--inner-border-radius);
   }
 
