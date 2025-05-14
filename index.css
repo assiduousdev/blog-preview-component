@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+:root {
+  --clr-accent-100: 47 88 63;
+
+  --clr-gray-100: 0 0 42;
+  --clr-gray-200: 0 0 7;
+
+  --clr-white: 0 0 100;
+
+  --fs-300: 1.4rem;
+  --fs-400: 1.6rem;
+  --fs-500: 2.4rem;
+
+  --ff-sans: "Figtree", sans-serif;
+
+  --fw-medium: 500;
+  --fw-extra-bold: 800;
+
+  /* similar to 150% in Figma */
+  --lh-100: 1.5em;
+
+  --spacing-100: 0.4rem;
+  --spacing-200: 0.8rem;
+  --spacing-300: 1.2rem;
+  --spacing-400: 2.4rem;
+}
+
+/* === reset === */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  color: hsl(var(--clr-gray-100));
+  font-size: var(--fs-400);
+  font-weight: var(--fw-medium);
+  font-family: var(--ff-sans);
+  background-color: hsl(var(--clr-accent-100));
+
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* === end of reest === */
+
+/* === utilities === */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* === end of utilities === */
