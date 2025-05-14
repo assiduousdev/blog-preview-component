@@ -57,6 +57,11 @@ body {
   box-sizing: border-box;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -79,3 +84,95 @@ img {
 }
 
 /* === end of utilities === */
+
+.blog-preview {
+  --outer-border-radius: 2rem;
+  --inner-border-radius: calc(var(--outer-border-radius) / 2);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  width: 38.4rem;
+  padding: var(--spacing-400);
+
+  border-radius: var(--outer-border-radius);
+  background-color: hsl(var(--clr-white));
+  border: 1px solid hsl(var(--clr-gray-200));
+  box-shadow: 0.8rem 0.8rem 0px 0px #000;
+
+  outline-offset: 0.2rem;
+
+  & .blog-preview__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .blog-preview__thumbnail {
+    min-height: 20rem;
+    border-radius: var(--inner-border-radius);
+  }
+
+  & .blog-preview__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+  }
+
+  /* this should handle cases where they are at least two categories */
+  & .blog-preview__categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-100);
+  }
+
+  & .blog-preview__category {
+    padding: var(--spacing-100) var(--spacing-300);
+
+    color: hsl(var(--clr-gray-200));
+    background-color: hsl(var(--clr-accent-100));
+    font-size: var(--fs-300);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-100);
+    border-radius: 0.4rem;
+  }
+
+  & .blog-preview__date-published {
+    color: hsl(var(--clr-gray-200));
+    font-size: var(--fs-300);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-100);
+  }
+
+  & .blog-preview__link:link,
+  & .blog-preview__link:visited {
+    display: inline-block;
+    color: hsl(var(--clr-gray-200));
+    font-size: var(--fs-500);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-100);
+    text-decoration: none;
+  }
+
+  & .blog-preview__short-description {
+    line-height: var(--lh-100);
+  }
+
+  & .blog-preview__footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-300);
+  }
+
+  & .blog-preview__author-img {
+    width: 3.2rem;
+    aspect-ratio: 1;
+  }
+
+  & .blog-preview__author {
+    color: hsl(var(--clr-gray-200));
+    font-size: var(--fs-300);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-100);
+  }
+}

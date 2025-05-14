@@ -25,7 +25,54 @@
     </header>
 
     <main>
-      <h2>Hello World!</h2>
+      <article
+        class="blog-preview"
+        aria-labelledby="html-css-foundations-heading"
+        tabindex="0"
+      >
+        <img
+          class="blog-preview__thumbnail"
+          src="./assets/images/illustration-article.svg"
+          alt="A graphic showing the blog's preview thumbnail"
+        />
+
+        <section class="blog-preview__content">
+          <ul class="blog-preview__categories" aria-label="Blog categories">
+            <li class="blog-preview__category">Learning</li>
+            <!-- 
+            <li class="blog-preview__category">Tech</li>
+            <li class="blog-preview__category">Web Development</li>
+            <li class="blog-preview__category">Beginner</li> 
+            -->
+          </ul>
+
+          <p class="blog-preview__date-published">
+            Published <time datetime="2023-12-21">21 Dec 2023</time>
+          </p>
+
+          <h2 id="html-css-foundations-heading">
+            <a class="blog-preview__link" href="#">HTML & CSS foundations</a>
+          </h2>
+
+          <p class="blog-preview__short-description">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </section>
+
+        <footer class="blog-preview__footer">
+          <div>
+            <img
+              class="blog-preview__author-img"
+              src="./assets/images/image-avatar.webp"
+              alt="Greg Hooper"
+            />
+          </div>
+          <p class="blog-preview__author" aria-label="Posted by Greg Hooper">
+            Greg Hooper
+          </p>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
